@@ -5,8 +5,8 @@ terraform {
       version = "0.2.1"
     }
     kubernetes = {
-      source  = "hashicorp/kubernetes"
-      version = "2.23.0"
+      source  = "registry.terraform.io/hashicorp/kubernetes"
+      version = "~> 1.0"
     }
     helm = {
       source  = "hashicorp/helm"
@@ -22,7 +22,8 @@ terraform {
 
 provider "kind" {}
 provider "kubernetes" {
-    config_path = "~/.kube/config"
+    
+    //config_path = "~/.kube/config"
 }
 
 provider "helm" {
